@@ -1,0 +1,10 @@
+# DockerComposeのファイルフォーマットバージョン。
+version: '3.8' 
+
+services:
+  # Webアプリケーションのサーバーサイドサービス
+  app:  #サービス名
+    container_name: myapp  # コンテナの名前を指定
+    build: .             # 現在のディレクトリのDockerfileを使用してイメージをビルドする
+    ports:
+      - '3000:3000'        # 使用するポートの指定
